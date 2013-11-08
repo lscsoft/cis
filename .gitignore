@@ -1,0 +1,10 @@
+/build
+/cis.egg-info
+/dist
+/docs/_build
+/docs/_generated
+/cis/version.py
+*.pyc
+*.so
+*.swp
+.DS_Store
