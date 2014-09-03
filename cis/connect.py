@@ -25,7 +25,7 @@ import urllib2
 import tempfile
 import cookielib
 
-from glue.auth.saml import HTTPNegotiateAuthHandler
+from .saml import HTTPNegotiateAuthHandler
 
 from . import version
 
