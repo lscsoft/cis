@@ -246,17 +246,6 @@ cmdclass['port'] = BuildPortfile
 # -----------------------------------------------------------------------------
 # Process complicated dependencies
 
-# XXX: this can be removed as soon as a stable release of glue can
-#      handle pip/--user
-try:
-    from glue import git_version
-except ImportError as e:
-    e.args = ("LIGO-CIS requires the GLUE package, which isn\'t available from "
-              "PyPI.\nPlease visit\n"
-              "https://www.lsc-group.phys.uwm.edu/daswg/projects/glue.html\n"
-              "to download and install it manually.",)
-    raise
-
 # don't use setup_requires if just checking for information
 # (credit: matplotlib/setup.py)
 setup_requires = []
@@ -299,7 +288,6 @@ setup(name=PACKAGENAME,
       setup_requires=setup_requires,
       requires=[
           'numpy',
-          'glue',
           'kerberos',
       ],
       install_requires=[
