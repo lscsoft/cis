@@ -55,6 +55,7 @@ else:
 
 # set basic metadata
 PACKAGENAME = 'cis'
+PACKAGEDAS = 'ligo-cis-client'
 AUTHOR = 'Duncan Macleod'
 AUTHOR_EMAIL = 'duncan.macleod@ligo.org'
 LICENSE = 'GPLv3'
@@ -273,7 +274,7 @@ else:
 # -----------------------------------------------------------------------------
 # run setup
 
-setup(name=PACKAGENAME,
+setup(name=PACKAGEDAS,
       provides=[PACKAGENAME],
       version=None,
       description=None,
