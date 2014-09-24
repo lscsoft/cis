@@ -60,6 +60,7 @@ class Description(object):
             cisid = cisid or name.cisid
             modified = modified or name.modified
             created = created or name.created
+            name = name.name
         self.name = name
         self.description = description
         self.text = text
@@ -162,7 +163,7 @@ class Description(object):
         if date is None:
             self._modified = date
         elif isinstance(date, datetime.datetime):
-            self._modified = datetime
+            self._modified = date
         else:
             self._modified = dateutil.parser.parse(date)
 
@@ -179,7 +180,7 @@ class Description(object):
         if date is None:
             self._created = date
         elif isinstance(date, datetime.datetime):
-            self._created = datetime
+            self._created = date
         else:
             self._created = dateutil.parser.parse(date)
 
@@ -232,7 +233,7 @@ class Description(object):
                            apiurl=apiurl, **jdata)
 
     def __str__(self):
-        return self.name
+        return self.description
 
     def __repr__(self):
         if self.name:
